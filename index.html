@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<title>Frontend Mentor | Todo app</title>
+
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style></style>
+</head>
+<body id="body" onload="countTodos()">
+    <main id="todo">
+        <div class="top">
+            <h1 class="app-name">Todo</h1>
+            <span class="theme-switch" onclick="setDark()"></span>
+        </div>
+        <form action="" class="todo-form" onsubmit="return false">
+            <label for="todo-input" onclick="newTodoOnClick()">+</label>
+            <input type="text" class="add-todo" id="todo-input" aria-label="NewTodo" placeholder="Create a new todo..." onkeydown="newTodo(event)">
+        </form>
+        <div class="todos">
+            <div id="order-list">
+
+                <ul id="todo-list-id" class="todo-list-class"></ul>
+            </div>
+            <div class="todo-controler">
+                <span class="todo-counter">
+                    <label for="" id="todo-number"></label> item left
+                </span>
+                <span class="todo-clear" onclick="clearTodos()">Clear Complete</span>
+            </div>
+
+            <div id="todo-filter">
+                <span class="filter active" onclick="filterTodos('all')">All</span>
+                <span class="filter" onclick="filterTodos('incomplete')">Active</span>
+                <span class="filter" onclick="filterTodos('completed')">Complete</span>
+            </div>
+        </div>
+        <p>Drag and drop to reorder list</p>
+    </main>
+
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="https://github.com/diogolopeswork">Diogo Lopes</a>.
+	</div>
+	<script src="todo.js"></script>
+	<script src="themeSwitcher.js"></script>
+</body>
+</html>

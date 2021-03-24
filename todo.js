@@ -133,7 +133,6 @@ function removeClass(element, name) {
 function clearTodos() {
     var td, i;
     td = document.getElementsByTagName("li");
-    console.log(td.length);
     for (i = 0; i < td.length; i++) {
         if (td[i].classList.contains("checked")) {
             console.log(td[i]);
@@ -141,7 +140,6 @@ function clearTodos() {
             i--;
         }
         countTodos();
-
     }
 }
 
